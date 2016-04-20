@@ -4,6 +4,9 @@
   border: 0;
   font-family: "Righteous", cursive;
 }
+body {
+  background-color: #3f51b5;
+}
 h1 {
   font-size: 5rem;
   font-family: "Righteous", cursive;
