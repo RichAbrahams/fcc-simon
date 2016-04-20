@@ -1,0 +1,219 @@
+@import url("https://fonts.googleapis.com/css?family=Righteous");
+
+*
+  margin 0
+  border 0
+  font-family: "Righteous", cursive;
+
+h1
+  font-size 5rem
+  font-family: "Righteous", cursive;
+
+input
+  outline none
+
+.wrapper
+  background-color rgb(63,81,181)
+  height 100vh
+  width 100%
+
+.header
+  text-align: center;
+  padding 1rem
+  color white
+  display: flex
+  flex-direction: row
+  justify-content: center;
+
+.header i
+  font-size 4rem
+  padding-top 15px
+  padding-left 15px
+
+.main
+  display flex
+  width 100%
+
+.column
+  height 100%
+  width 100%
+
+.centerCol
+  min-width: 500px
+  display flex
+  justify-content: center;
+
+.gameCont
+  width 450px
+  height 100%
+  padding-top 50px
+
+.buttonsRow1, .buttonsRow2
+  height 125px
+  width 100%
+  margin-bottom 30px
+  display flex
+  text-align: center;
+  justify-content center;
+  align-items: center
+
+.buttonsRow2
+  margin-bottom 0
+
+.colorButton
+  background-color #888
+  width 125px
+  height 125px
+  margin-left 15px
+  margin-right 15px
+  border 8px solid #222
+  border-radius 20px
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  animation-duration: 750ms;
+  animation-iteration-count: 1
+  transition: background-color 1s
+
+#b0
+  background-color rgb(51,51,51)
+
+#b1
+  background-color rgb(51,51,51)
+
+#b2
+  background-color rgb(51,51,51)
+
+#b3
+  background-color  rgb(51,51,51)
+
+@keyframes greenOn {
+  0% {background-color: rgb(51,51,51)}
+  100% {background-color: rgb(0, 102, 0)}
+}
+
+.controlsCont
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding-top 50px
+
+.controlBox
+  text-align: center;
+  margin-left 10px
+  margin-right 10px
+
+.controlBox p
+  padding-top 10px
+  transform: rotate(-45deg) translate(30px, 10px);
+  text-shadow: 2px 2px 2px rgba(34, 34, 34, 0.2);
+  color #222
+
+.control
+  width 60px
+  height: 60px
+  margin-left 15px
+  margin-right 15px
+  border-radius: 30px
+  border 5px solid #222
+  background-color rgb(102, 0, 0)
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  transition: background-color 1s
+
+#reset
+  animation-duration: 1.5s;
+  animation-iteration-count: 1
+
+@keyframes flashGreen {
+  0% {background-color: rgb(0, 102, 0)}
+  50% {background-color: rgb(0, 255, 0)}
+  100% {background-color: rgb(0, 102, 0)}
+}
+
+@keyframes flashRed {
+  0% {background-color: rgb(153, 0, 0)}
+  50% {background-color: rgb(255, 0, 0)}
+  100% {background-color: rgb(153, 0, 0)}
+}
+
+@keyframes flashYellow {
+  0% {background-color: rgb(204, 150, 0)}
+  50% {background-color: rgb(255, 255, 0)}
+  100% {background-color: rgb(204, 150, 0)}
+}
+
+@keyframes flashBlue {
+  0% {background-color: rgb(0, 71, 153)}
+  50% {background-color: rgb(0, 255, 255)}
+  100% {background-color: rgb(0, 71, 153)}
+}
+
+@keyframes resetAnim {
+  0% {background-color: rgb(102, 0, 0)}
+  50% {background-color: rgb(160, 0, 0)}
+  100% {background-color: rgb(102, 0, 0)}
+}
+
+.progressCont
+  display: flex
+  justify-content: center;
+  margin-top 50px
+
+progress[value]
+  appearance: none
+  width 250px
+  height 50px
+  border 5px solid #222
+  border-radius: 10px
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5), 0 6px 20px 0 rgba(0, 0, 0, 0.19)
+  background-color #222
+
+progress[value]::-webkit-progress-bar
+  background-color #333
+  border-radius: 10px
+
+progress[value]::-webkit-progress-value
+  background-color rgb(0, 102, 0)
+  border-radius: 10px 0px 0px 10px
+
+.modalCont
+  position: absolute;
+  z-index: 1;
+  top 0
+  left 0
+  width 100%
+  height 100%
+  background-color rgba(0,0,0,0.5);
+  display: flex;
+  display: none
+  animation-duration: 3s;
+  animation-iteration-count: 1
+
+
+.modal
+  width 500px
+  height 250px
+  position: fixed;
+  left 50%
+  top 50%
+  transform: translate(-50%,-50%);
+  background-color rgb(51,51,51)
+  border 5px solid #222
+  border-radius: 10px
+  display: flex;
+  align-items: center;
+  justify-content: center
+  flex-direction: column;
+  color white
+  font-size 3rem
+  animation-duration: 3s
+  animation-iteration-count: 1
+
+@keyframes modalFade {
+  0% {opacity: 0}
+  100 {opacity: 1}
+}
+
+.modal p
+  margin-bottom 0.5em
+
+.modal i:hover
+  color rgb(0, 255, 0)
