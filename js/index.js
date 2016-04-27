@@ -20,6 +20,8 @@ document.addEventListener("DOMContentLoaded", function() {
   var modal = document.querySelector('.modalCont');
   var endIcon = document.querySelector('.endIcon');
 
+// object containing game values and methods
+
   var game = {
 
     sequence: [],
@@ -98,6 +100,8 @@ document.addEventListener("DOMContentLoaded", function() {
     }
   };
 
+// object containing player input and associated methods
+
   var player = {
 
     input: [],
@@ -133,6 +137,8 @@ document.addEventListener("DOMContentLoaded", function() {
 
   };
 
+// oscillators to generate button sounds
+
   function buttonSound(i) {
     var oscillator = context.createOscillator();
     oscillator.frequency.value = freq[i];
@@ -155,6 +161,8 @@ document.addEventListener("DOMContentLoaded", function() {
     oscillator.stop(currentTime + 0.5);
     return;
   }
+
+// start button controller
 
   function startClick() {
     if (gameOn) {
@@ -183,6 +191,8 @@ document.addEventListener("DOMContentLoaded", function() {
     }
   }
 
+// strict button controller
+
   function strictClick() {
     if (gameOn) {
       if (strictOn) {
@@ -194,6 +204,8 @@ document.addEventListener("DOMContentLoaded", function() {
       }
     }
   }
+
+// reset button controller
 
   function resetClick() {
     if (gameOn) {
@@ -210,6 +222,8 @@ document.addEventListener("DOMContentLoaded", function() {
 
     }
   }
+
+// button click routing
 
   function controlsClick(e) {
     e = e.target.id;
@@ -228,6 +242,8 @@ document.addEventListener("DOMContentLoaded", function() {
 
     }
   }
+
+// color button controller
 
   function colorClick(e) {
     function mouseUp() {
@@ -308,6 +324,8 @@ document.addEventListener("DOMContentLoaded", function() {
     }
   }
 
+// eventlisteners for button divs
+
   controlsCont.addEventListener('click', function(e) {
     controlsClick(e);
     e.preventDefault();
@@ -327,8 +345,9 @@ document.addEventListener("DOMContentLoaded", function() {
     e.preventDefault();
   }, false);
 
+// end modal eventlistener to restart game
+
   endIcon.addEventListener('click', function() {
-    console.log('i click');
     modalCont.style.display = 'none';
     modalCont.style.WebkitAnimationName = null;
     cpuTurn = true;
