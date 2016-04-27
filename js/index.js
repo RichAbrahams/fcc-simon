@@ -332,20 +332,24 @@ document.addEventListener("DOMContentLoaded", function() {
   }, false);
 
   colorButtonCont.addEventListener('touchstart', function(e) {
+    if (gameOn === true){
     if (e.target.id[1] === "0" || e.target.id[1] === "1" || e.target.id[1] === "2" || e.target.id[1] === "3") {
       colorClick(e);
     }
     e.preventDefault();
+  }
   }, false);
 
   colorButtonCont.addEventListener('mousedown', function(e) {
+    if (gameOn === true){
     if (e.target.id[1] === "0" || e.target.id[1] === "1" || e.target.id[1] === "2" || e.target.id[1] === "3") {
       colorClick(e);
     }
     e.preventDefault();
+  }
   }, false);
 
-// end modal eventlistener to restart game
+// end game modal eventlistener to restart game
 
   endIcon.addEventListener('click', function() {
     modalCont.style.display = 'none';
